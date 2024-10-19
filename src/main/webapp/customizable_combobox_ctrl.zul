@@ -1,0 +1,6 @@
+<vlayout>
+    <checkbox checked="true" label="Enable Auto Drop-down"
+        onCheck="bd.autodrop = self.checked" />
+    <checkbox checked="true" label="Make Button Visible"
+        onCheck="bd.buttonVisible = self.checked" />
+</vlayout>

@@ -1,0 +1,18 @@
+<zk>
+    <zscript><![CDATA[
+        String[] languages = {"Ada","Basic","C","C++","CSS","Cobol","Forth","Fortran",
+            "Go","Groovy","Haskell","HTML","Java","JavaScript","Lisp","Python","Ruby",
+            "Scala","Scheme"};
+    ]]></zscript>
+    <bandbox id="bd" mold="rounded" autodrop="true">  
+        <bandpopup>
+            <listbox height="250px" width="450px"
+                onSelect="bd.value=self.selectedItem.label; bd.close();">
+                <listhead>
+                    <listheader label="Programming Languages" />
+                </listhead>
+                <listitem label="${each}" forEach="${languages}" />
+            </listbox>
+        </bandpopup>
+    </bandbox>
+</zk>

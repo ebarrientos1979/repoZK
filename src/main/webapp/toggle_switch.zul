@@ -1,0 +1,29 @@
+<zk>
+    <grid id="settings">
+        <columns>
+            <column/>
+            <column width="100px"/>
+        </columns>
+        <auxhead>
+            <auxheader colspan="2" label="Synchronization Settings"/>
+        </auxhead>
+        <rows>
+            <row>
+                Email
+                <checkbox mold="switch" checked="true"/>
+            </row>
+            <row>
+                Calendar
+                <checkbox mold="switch"/>
+            </row>
+            <row>
+                Favorites (disabled)
+                <checkbox mold="switch" checked="true" disabled="true"/>
+            </row>
+            <row>
+                Logins (disabled)
+                <checkbox mold="switch" disabled="true"/>
+            </row>
+        </rows>
+    </grid>
+</zk>

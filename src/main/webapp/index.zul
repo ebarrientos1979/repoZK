@@ -1,6 +1,108 @@
-<?page title="Auto Generated index.zul"?>
-<window title="Hello World!!" border="normal" width="200px">
+<zk>
+	<style>
+        .z-rating > * {
+            min-width: 24px;
+        }
+        .red-heart .z-rating-selected,
+        .red-heart .z-rating-hover {
+            color: #d0021b;
+        }
+        .feedback .z-label {
+            font-size: 14px;
+        }
+        .bigbutton {
+            border-radius: 8px;
+        }
+        .bigbutton > i {
+            font-size: 150px;
+            opacity: 0.6;
+        }
+        .iceblue_c .bigbutton > i {
+            opacity: 0.9;
+        }
 
-<label value="You are using: ${desktop.webApp.version}"/>
-
-</window>
+    </style>
+	<window id="win_customer" title="ENTRY CUSTOMER" border="normal" width="100%">
+		<grid height="350px" width="100%">
+			<columns>
+				<column width="30%"/>
+				<column width="30%"/>
+			</columns>
+			
+			<rows>
+				<row>
+					<label value="Nombre"/>
+					<div>
+												
+						<button iconSclass="z-icon-power-off"  label="Validar"/>						
+					</div>				
+					
+				</row>
+				<row>					
+					<label value="Lenguaje Programacion"/>
+					<vlayout>
+						<radiogroup id="sv1" onCheck="choice1.value = self.selectedItem.label" />
+						<label id="choice1" />
+						<radio id="ra1" label="Web IDE Support" radiogroup="sv1" />
+		                <radio id="ra2" label="Bug Fixing" radiogroup="sv1" />
+		                <radio id="ra3" label="Performance" radiogroup="sv1" />
+		                <radio id="ra4" label="Backward Compatibility" radiogroup="sv1" />
+		                <radio id="ra5" label="Styling" radiogroup="sv1" />
+	                </vlayout>
+				</row>
+				
+				<row>
+					<label value="Tipo de Mascota"/>
+					<vlayout>        
+				        <checkbox id="l1" label="Perro" onCheck="doChecked()" />
+				        <checkbox id="l2" label="Gato" onCheck="doChecked()" />
+				        <checkbox id="l3" label="Tortuga" onCheck="doChecked()" />
+				        <hlayout>
+				            Tu haz seleccionado :
+				            <label id="layout" />
+				        </hlayout>
+				        <zscript><![CDATA[
+				            void doChecked() {
+				                layout.value = (l1.isChecked() ? l1.label+' ' : "") 
+				                    + (l2.isChecked() ? l2.label+' ' : "")
+				                    + (l3.isChecked() ? l3.label+' ' : "");
+				            }
+				        ]]></zscript>
+    				</vlayout>
+				</row>
+	
+				<row>
+					<label value="Email"/>
+					<textbox id="email" width="100%"/>
+				</row>
+				<row>
+					<label value="Fecha Ingreso"/>
+					<vlayout>
+            			<datebox id="db5" cols="12" format="dd/MM/yyyy" onCreate="self.value = new Date()" />            			
+            		</vlayout>
+				</row>
+	
+				<row>
+					<label value="Interes por Curso"/>
+					<rating rating="3" iconSclass="z-icon-heart" sclass="red-heart"/>
+				</row>
+				<row>
+					<label value="Cantidad"/>
+					
+					<doublespinner id="cantidad" value="0.00" step="0.1" />
+				</row>
+	
+				<row>
+					<label value="Direccion"/>
+					<textbox id="direccion" width="100%"/>
+				</row>
+	
+				<row>
+					<label value=""/>
+					<button id="grabar" label="GRABAR"></button>
+				</row>
+	
+			</rows>
+		</grid>		
+	</window>
+</zk>

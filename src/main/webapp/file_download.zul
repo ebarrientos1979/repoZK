@@ -1,0 +1,5 @@
+<button label="Download sun.jpg">
+    <attribute name="onClick"><![CDATA[
+        Filedownload.save("/widgets/file_handling/file_download/img/sun.jpg", null);
+    ]]></attribute>
+</button>

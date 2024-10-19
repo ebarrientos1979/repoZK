@@ -1,0 +1,38 @@
+<zk>
+	<window id="win_customer" title="ENTRY CUSTOMER" border="normal" width="100%">
+		<grid height="350px" width="100%">
+			<columns>
+				<column width="30%"/>
+				<column width="30%"/>
+			</columns>
+	
+			<rows>
+				<row>
+					<label value="Nombre"/>
+					<textbox id="nombre" width="100%"/>
+				</row>
+	
+				<row>
+					<label value="Email"/>
+					<textbox id="email" width="100%"/>
+				</row>
+	
+				<row>
+					<label value="Telefono"/>
+					<textbox id="telefono" width="100%"/>
+				</row>
+	
+				<row>
+					<label value="Direccion"/>
+					<textbox id="direccion" width="100%"/>
+				</row>
+	
+				<row>
+					<label value=""/>
+					<button id="grabar" label="GRABAR"></button>
+				</row>
+	
+			</rows>
+		</grid>		
+	</window>
+</zk>

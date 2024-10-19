@@ -1,0 +1,15 @@
+<zk>
+    <div viewModel="@id('vm')@init('demo.combobox.searchbox.LanguageVM')" height="100%">
+        <hlayout>
+            <label value="Technical Skills:" style="line-height: 24px"/>
+            <searchbox model="@init(vm.proglangs)" placeholder="None" width="20vw">
+                <template name="model">
+                    <html><![CDATA[
+                <i class="z-icon-language"></i> ${each}
+                ]]></html>
+                </template>
+            </searchbox>
+            <button label="Submit" onClick="@command('show')" />
+        </hlayout>
+    </div>
+</zk>

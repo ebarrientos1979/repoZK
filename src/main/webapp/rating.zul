@@ -1,0 +1,38 @@
+<zk>
+    <style>
+        .z-rating > * {
+            min-width: 24px;
+        }
+        .red-heart .z-rating-selected,
+        .red-heart .z-rating-hover {
+            color: #d0021b;
+        }
+        .feedback .z-label {
+            font-size: 14px;
+        }
+    </style>
+    <vlayout sclass="feedback">
+        <label style="font-size: 18px;font-weight: bold;" value="Feedback"/>
+        <label style="font-weight: bold;" value="Personal skills and competences"/>
+        <separator/>
+        <hlayout valign="middle" spacing="15px">
+            <div width="300px">Leadership skills</div>
+            <rating rating="3" iconSclass="z-icon-star"/>
+        </hlayout>
+        <hlayout valign="middle" spacing="15px">
+            <div width="300px">English language knowledge</div>
+            <rating rating="2" iconSclass="z-icon-star" readonly="true"/>
+            (read-only)
+        </hlayout>
+        <hlayout valign="middle" spacing="15px">
+            <div width="300px">Ability to learn</div>
+            <rating rating="5" iconSclass="z-icon-star" disabled="true"/>
+            (disabled)
+        </hlayout>
+        <hlayout valign="middle" spacing="15px">
+            <div width="300px">Communication skills</div>
+            <rating rating="3" iconSclass="z-icon-heart" sclass="red-heart"/>
+            (custom icon)
+        </hlayout>
+    </vlayout>
+</zk>

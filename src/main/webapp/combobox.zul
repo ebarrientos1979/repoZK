@@ -1,0 +1,11 @@
+<zk>
+    <zscript><![CDATA[
+        String[] languages = {"Ada","Basic","C","C++","CSS","Cobol","Forth","Fortran",
+            "Go","Groovy","Haskell","HTML","Java","JavaScript","Lisp","Python","Ruby",
+            "Scala","Scheme"};
+    ]]></zscript>
+    
+	<combobox id="cmbColor" width="150px">    
+    	<comboitem label="${each}" forEach="${languages}"/>    
+	</combobox>
+</zk>

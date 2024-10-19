@@ -1,0 +1,69 @@
+<zk>
+
+	
+	<listbox id="box" width="100%" >
+        <listhead >
+            <listheader label="Author" sort="auto" />
+            <listheader label="Title" sort="auto" />
+            <listheader label="Publisher" sort="auto" />
+            <listheader label="Hardcover" sort="auto" />
+        </listhead>
+        <listitem>
+            <listcell label="Philip Hensher" />
+            <listcell label="The Northern Clemency" />
+            	<zscript><![CDATA[
+					String[] languages = {"Ada","Basic","C","C++","CSS","Cobol","Forth","Fortran",
+					"Go","Groovy","Haskell","HTML","Java","JavaScript","Lisp","Python","Ruby",
+					"Scala","Scheme"};
+				]]></zscript>
+		    <bandbox id="bd" mold="rounded" autodrop="true">  
+		        <bandpopup>
+		            <listbox height="250px" width="450px" mold="paging" autopaging="true"
+		                onSelect="bd.value=self.selectedItem.label; bd.close();">
+		                <listhead>
+		                    <listheader label="Programming Languages" />
+		                </listhead>
+		                <listitem label="${each}" forEach="${languages}" />
+		            </listbox>
+		        </bandpopup>
+		    </bandbox>
+            <listcell label="608 pages" />
+        </listitem>
+        <listitem>
+            <listcell label="Philip Hensher" />
+            <listcell label="The Fit" />
+            <listcell label="HarperPerennial (April 4, 2005)" />
+            <listcell label="240 pages" />
+        </listitem>
+        <listitem>
+            <listcell label="Philip Hensher" />
+            <listcell label="Kitchen Venom" />
+            <listcell label="Flamingo (May 19, 2003)" />
+            <listcell label="336 pages" />
+        </listitem>
+        <listitem>
+            <listcell label="Michael Greenberg" />
+            <listcell label="Hurry Down Sunshine" />
+            <listcell label="Other Press (September 9, 2011)" />
+            <listcell label="240 pages" />
+        </listitem>
+        <listitem>
+            <listcell label="Michael Greenberg" />
+            <listcell label="Painless Vocabulary (Painless)" />
+            <listcell label="Barron's Educational Series (September 1, 2001)" />
+            <listcell label="292 pages" />
+        </listitem>
+        <listitem>
+            <listcell label="Rick Perlstein" />
+            <listcell label="Nixonland: The Rise of a President and the Fracturing of America" />
+            <listcell label="Scribner; 1st Scribner Hardcover Ed edition (May 13, 2011)" />
+            <listcell label="896 pages" />
+        </listitem>
+        <listitem>
+            <listcell label="Rick Perlstein" />
+            <listcell label="Nixonland" />
+            <listcell label="Simon &amp; Schuster (May 13, 2011)" />
+            <listcell label="896 pages" />
+        </listitem>
+    </listbox>
+</zk>
